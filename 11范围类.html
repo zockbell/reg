@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>范围类</title>
+</head>
+<body>
+	<p>
+	正则表达式还提供了范围类
+	所以我们可以使用[a-z]来连接两个字符表示从a到z的做生意字符
+	这是一个闭区间，也就是包含a和z本身
+
+	</p>
+	<script type="text/javascript">
+	alert("a1b2d3x4z9".replace(/[a-z]/, "Q"));   //Q1b2d3x4z9
+	//alert("a1b2d3x4z9".replace(/[a-z]/g, "Q"));   //Q1Q2Q3Q4Q9
+	</script>
+</body>
+</html>

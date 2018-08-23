@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>例</title>
+</head>
+<body>
+
+<form>
+<!-- 在input标签中声明pattern属性即可使用正则表达式了。这是HTML5的新特性，之前的话可以使用JavaScript验证。[A-z]表示只能是26个英文字母的大小写，{6}表示只能是6位的。 -->
+文本验证：<input type="text" name="check_text" pattern="[A-z]{6}"/>
+
+<input type="password" name="check_password" pattern="\w{6,16}" />
+<!-- 比如说我在input 密码中验证只能输入6-16位的字母，数字或者下划线。 -->
+
+<input type="submit" />
+</form>
+
+</body>
+</html>

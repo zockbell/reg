@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多行匹配</title>
+</head>
+<body>
+	<p></p>
+	<script>
+		var mulStr = "
+		@123
+		@456
+		@789"
+
+		alert(mulStr.replace(/^@\d/gm , "贝"))；
+	</script>
+</body>
+</html>

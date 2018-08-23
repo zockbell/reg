@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分组</title>
+</head>
+<body>
+	<p>
+	匹配字符串 zock 连续出现 3 次的场景
+	使用 () 可以达到分组的功能，使量词作用于分组
+	(zock){3}
+
+	() 代表分组
+	[] 代表或（也就是其中的一个）
+	{} 代表量词（重复的次数）
+	</p>
+	
+	<script type="text/javascript">
+	// var str = "zock好zockzockzockzock坏zockzockzockbell";
+	// alert( str.replace(/zock{3}/g),'贝');
+
+
+	str2 = "a1b2c3d4";
+	// alert( str2.replace(/[a-z]\d{3}/g, '贝') );   //a1b2c3d4
+	alert( str2.replace(/([a-z]\d){3}/g, '贝') );    //贝d4
+
+	</script>
+</body>
+</html>

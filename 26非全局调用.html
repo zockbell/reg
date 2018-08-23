@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>非全局调用</title>
+</head>
+<body>
+	<p>
+		调用非全局的RegExp对象的exec()时，返回数组
+		第一个元素是与与此同时表达式相匹配的文本
+		第二个元素是与RegExpObject的第一个子表达式相匹配的文本(如果有的话)
+		第三个元素是与RegExp对象的第二个子表达式相匹配的文本（如果有的话），以此类推
+	</p>
+	
+	<script type="text/javascript">
+		var reg3 = /\d(\w)\d/;
+		var reg4 = /\d(\w)\d/g;
+
+		var ts = "$1az2db3ce4dw5el";
+		var ret = reg3.exec(ts);
+
+		console.log(reg3.lastIndex + "\t" + ret.index + "\t" + ret.toString());
+
+		while(ret = reg4.exec(ts)){
+			console.log(reg3.lastIndex + "\t" + ret.index + "\t" + ret.toString());			
+		}
+	</script>
+</body>
+</html>

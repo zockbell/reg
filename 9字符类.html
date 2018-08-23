@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符类</title>
+</head>
+<body>
+	<p>
+	我们可以使用元字符[]来构建一个简单的类
+	所谓类是指符合某些特性的对象，一个泛指，而不是特指某个字符
+	表达式[abc]把字符a或b或c归为一类，表达式可以匹配这类的字符
+	</p>
+	<script type="text/javascript">
+	alert('a1b2c3d4'.replace(/[abc]/, "X"));    //X1b2c3d4
+	alert('a1b2c3d4'.replace(/[abc]/g, "X"));    //X1X2X3X4
+	</script>
+</body>
+</html>

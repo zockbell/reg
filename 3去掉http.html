@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>去掉http协议的jpg文件的协议头</title>
+</head>
+<body>
+替换前:
+http://img.host.com/images/fasdfkl.jpg
+https://img.host.com/images/dlskjf.jpg
+http://img.host.com/images/asldkfjsldfj.jpg
+http://img.host.com/images/qiwdss.png
+http://img.host.com/images/usdfl.jpg
+https://img.host.com/images/sdflj.png
+http://img.host.com/images/asdlfjsfadflkj.gif
+
+
+正则语句：http:(\/\/.+\.jpg)
+		replace with: $1
+
+替换后：
+//img.host.com/images/fasdfkl.jpg
+https://img.host.com/images/dlskjf.jpg
+//img.host.com/images/asldkfjsldfj.jpg
+http://img.host.com/images/qiwdss.png
+//img.host.com/images/usdfl.jpg
+https://img.host.com/images/sdflj.png
+http://img.host.com/images/asdlfjsfadflkj.gif
+</body>
+</html>

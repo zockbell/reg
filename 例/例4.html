@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td class="name">张三</td>
+			<td>李四</td>
+		</tr>
+		<tr>
+			<td class="name2">11</td>
+			<td class="name">22</td>
+		</tr>
+		<tr>
+			<td class="ndk">33</td>
+			<td class="name">44</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var reg = /<td\s*class="name">.*?<\/td>/g;
+		alert(replace(reg,"X"));
+	</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- var str = ‘hello<img src=“haha.png” alt=“哈哈” />world’; //正则匹配输出’hello[哈哈]world’ -->
+	<script type="text/javascript">
+		var str = 'hello<img src="haha.png" alt="哈哈" />world';
+
+		var reg = /\w{5}/g;
+		alert(str.match(reg));
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>非贪婪模式</title>
+</head>
+<body>
+	<p>
+	需求：让正则表达式尽可能少的匹配，也就是说一旦成功匹配不再继续尝试（这就是非贪婪模式）
+
+	做法很简单，只需要在量词后加上 ? 即可
+	</p>
+	
+	<script type="text/javascript">
+	var str = "123456789";
+	alert( str.match(/\d{3,6}?/g) );   //123,456,789
+	</script>
+</body>
+</html>

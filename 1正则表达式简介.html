@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则表达式</title>
+</head>
+<body>
+	Regular Expression 使用单个字符串来描述、匹配一系列符合某个句法规则的字符串
+	说简单了就是按照某种规则去匹配符合条件的字符串
+	去regexper.com可以去验证正则表达式
+
+	
+	\  转义
+	\d 表示数字(digit)
+	\b 单词边界(word boundary)
+	? 表示0个或1个
+	+ 表示1个或多个
+	* 表示任意个
+	. 表示任意字符(any character)
+	() 表示分组，分组可以获取它的内容
+	[] 表示或
+	{} 表示个数，出现的量次
+	g 代表global，进行全局匹配
+	
+	//////////////////////////////////////////////////////////
+
+	? 	1、表示0个或1个
+		2、非贪婪模式
+			<script type="text/javascript">
+			var str = "123456789";
+			alert( str.match(/\d{3,6}?/g) );   //123,456,789
+			</script>
+
+	?: 	不希望捕获某些分组，只需要在分组内加上 ?: 即可
+			<script type="text/javascript">
+			(?:zock).(ok)
+			</script>
+	?=	断言后边是什么
+	?!  断言后边不是什么
+	
+	
+</body>
+</html>

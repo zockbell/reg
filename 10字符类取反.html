@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符类取反</title>
+</head>
+<body>
+	<p>
+	使用元字符 ^ 创建反向类/负向类
+	反向类的意思是不属于某类的内容
+	表达式[^abc]表示 不是字符a或b或c的内容
+	</p>
+	<script type="text/javascript">
+	//alert('a1b2c3d4'.replace(/[^abc]/, "X"));    	//aXb2c3d4
+	alert('a1b2c3d4'.replace(/[^abc]/g, "X"));    	//aXbXcXXX
+	</script>
+</body>
+</html>

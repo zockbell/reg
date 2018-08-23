@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则表达式对象本身的方法</title>
+</head>
+<body>
+	<p>
+	1、RegExp.prototype.test(str)
+	用于测试字符串参数中是否存在匹配正则表达式模式的字符串
+	如果存在返回 true，否则返回 false
+
+
+	2、RegExp.prototype.exec(str)
+	使用正则表达式模式对字符串执行搜索，并将更新全局RegExp对象的属性以反映匹配结果
+
+	如果没有匹配的文本则返回null，否则返回一个结果数组：
+	index 声明匹配文本的第一个字符的位置
+	input 存放被检索的字符串 string
+
+	</p>
+	
+	<script type="text/javascript">
+	var reg1 = /\w/;
+	var reg2 = /\w/g;
+
+	// console.log(reg1.test("1"));
+
+	// console.log(reg2.test("ab"));
+	while(reg2.test("ab")){
+		console.log(reg2.lastIndex);
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>量词</title>
+	<style type="text/css">
+	td { height: 35px; border: 1px solid #ddd; }
+	</style>
+</head>
+<body>
+	<p>
+		我们希望匹配一个连续出现 10次 数字的字符串
+			我们可能会写成 \d\d\d\d\d\d\d\d\d\d
+			可以写成： /\d{10}/
+
+
+			\d{20}\w\d?\w+\d*\d{3}\w{3,5}\d{3,}
+	</p>
+	<table>
+		<tr>
+			<td>字符</td>
+			<td>含义</td>
+		</tr>
+		<tr>
+			<td>?</td>
+			<td>出现零次或一次（最多出现一次）</td>
+		</tr>
+		<tr>
+			<td>+</td>
+			<td>出现一次或多次（至少出现一次）</td>
+		</tr>
+		<tr>
+			<td>*</td>
+			<td>出现零次或多次（任意次）</td>
+		</tr>
+		<tr>
+			<td>{n}</td>
+			<td>出现n次</td>
+		</tr>
+		<tr>
+			<td>{n,m}</td>
+			<td>出现n到m次</td>
+		</tr>
+		<tr>
+			<td>{n,}</td>
+			<td>至少出现n次</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

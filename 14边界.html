@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>边界</title>
+</head>
+<body>
+	<p>
+	边界 <br />
+	正则表达式还提供了几个常用的边界匹配字符
+	</p>
+	<table>
+		<tr>
+			<td>字符</td>
+			<td>含义</td>
+		</tr>
+		<tr>
+			<td>^</td>
+			<td>以xxx开始</td>
+		</tr>
+		<tr>
+			<td>$</td>
+			<td>以xxx结束</td>
+		</tr>
+		<tr>
+			<td>\b</td>
+			<td>单词边界</td>
+		</tr>
+		<tr>
+			<td>\B</td>
+			<td>非单词边界</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+	// 1
+	//console.log("This is a boy".replace(/\bis\b/g, '贝'));   //单词边界
+
+	// 2
+	console.log("This is a boy".replace(/\Bis/g, '贝'));   //非单词边界
+
+	
+	</script>
+</body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>预定义类</title>
+	<style type="text/css">
+	td { height: 35px; border:1px solid #ddd; }
+	</style>
+</head>
+<body>
+	<p>
+		规律掌握：
+		小写字母代表正则表达式，大写字母代表的是反向正则表达式，等价类 ^ 取反
+		如："aadslk90238adsf"这里的数字也属于单词字符 \w都可以匹配的到
+	</p>
+	<p>
+		<table>
+			<tr>
+				<td>字符</td>
+				<td>等价类</td>
+				<td>含义</td>
+			</tr>
+			<tr>
+				<td>.</td>
+				<td>[^\r\n]</td>
+				<td>除了回车符和换行符之外的所有字符</td>
+			</tr>
+			<tr>
+				<td>\d</td>
+				<td>[0-9]</td>
+				<td>数字字符</td>
+			</tr>
+			<tr>
+				<td>\D</td>
+				<td>[^0-9]</td>
+				<td>非数字字符</td>
+			</tr>
+			<tr>
+				<td>\s</td>
+				<td>[\t\n\x0B\f\r]</td>
+				<td>空白符</td>
+			</tr>
+			<tr>
+				<td>\S</td>
+				<td>[^\t\n\x0B\f\r]</td>
+				<td>非空白符</td>
+			</tr>
+			<tr>
+				<td>\w</td>
+				<td>[a-zA-Z_0-9]</td>
+				<td>单词字符（字母、数字下划线）</td>
+			</tr>
+			<tr>
+				<td>\W</td>
+				<td>[^a-zA-Z_0-9]</td>
+				<td>非单词字符</td>
+			</tr>
+		</table>
+	</p>
+	<script type="text/javascript">
+	// alert("a1b2d3x4z9WEJ1KS9KA7".replace(/[a-zA-Z]/g, "Q"));
+	// alert("a1b2d3x4z9WEJ1KS9KA7".replace(/\D/g, "Q"));
+	// 以上两个完全等价
+
+	// 1、匹配一个 ab+数字+任意字符 的字符串  /ab\d./
+
+	</script>
+</body>

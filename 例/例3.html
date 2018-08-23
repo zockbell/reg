@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	匹配两个字符串A与B中间的字符串包含A与B：
+	表达式: A.*?B
+	示例: Abaidu.comB
+	结果: Awww.apizl.comB
+
+	<script type="text/javascript">
+	var str = "Abaidu.comB";
+	var reg = /(?!A).*(?=B)/;
+	console.log(str.match(reg));   //baidu.com
+	</script>
+</body>
+</html>

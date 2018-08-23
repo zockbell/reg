@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>字符串对象方法</title>
+</head>
+<body>
+	<p>
+		1、String.prototype.search(reg)
+		search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串
+
+		方法返回第一个匹配结果 index,查找不到返回 -1
+
+		search()方法不执行全局匹配，它将忽略标志g，并且总是从字符串的开始进行检索
+
+
+		2、String.prototype.match(reg)
+		match()方法将检索字符串，以找到一个或多个与regexp相匹配的文本
+		regexp是否具有标志g对结果影响很大
+		
+		非全局调用（没有 g）
+		如果regexp不有标志g，那么match()方法就只能在字符串中执行一次匹配
+		如果没有找到任何匹配的文本，将返回null
+		否则它将返回一个数组，其中存放了与它找到的匹配文本有关的信息
+
+		返回数组的第一个元素存放的是匹配文本，而其余的元素存放的是与正则表达式的子表达式匹配的文本
+		除了常规的数组元素之外，返回的数组还含有2个对象属性
+		index声明匹配文本的起始字符在字符串的位置
+		input 声明对stringObject的引用 
+		
+
+	</p>
+	
+	<script type="text/javascript">
+	//"a1b2c3d4e5".search(/\w\d{2}/);   //-1
+
+	"a1b2c3d4e5".match(/\d\w\d/);  //["1b2", index: 1, input: "a1b2c3d4e5"]
+	"a1b2c3d4e5".match(/\d\w\d/g);  //(2) ["1b2", "3d4"]
+
+	</script>
+</body>
+</html>
